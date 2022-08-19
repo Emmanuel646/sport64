@@ -16,3 +16,12 @@ h2 {
     font-size: 2rem;    
 }
 
+#title_form {
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+
