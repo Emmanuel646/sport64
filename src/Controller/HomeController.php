@@ -15,4 +15,12 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/sport-anglet', name: 'structure1')]
+    public function pages(): Response
+    {
+        return $this->render('pages/structure.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
