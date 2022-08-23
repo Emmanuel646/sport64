@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 class HomeController extends AbstractController
 {
@@ -16,7 +17,10 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/sport-anglet', name: 'structure1')]
+    /**
+     * @isGranted("ROLE_USER")
+     * @Route ("/sport-64/anglet", name="structure1")
+     */
     public function pages(): Response
     {
         return $this->render('pages/structure.html.twig', [
