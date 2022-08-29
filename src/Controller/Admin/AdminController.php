@@ -20,7 +20,7 @@ class AdminController extends AbstractController
     #[Route('/admin/anglet-1', name: 'structureAnglet1')]
     public function structure1(): Response
     {
-        return $this->render('admin/structure.html.twig', [
+        return $this->render('admin/structureAnglet1.html.twig', [
             'controller_name' => 'AdminController',
         ]);
     }
