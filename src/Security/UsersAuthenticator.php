@@ -48,7 +48,7 @@ class UsersAuthenticator extends AbstractLoginFormAuthenticator
         }
 
         // For example:
-        return new RedirectResponse($this->urlGenerator->generate('structure1'));
+        return new RedirectResponse($this->urlGenerator->generate('structureUser'));
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 

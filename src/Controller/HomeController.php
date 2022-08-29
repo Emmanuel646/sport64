@@ -19,11 +19,11 @@ class HomeController extends AbstractController
 
     /**
      * @isGranted("ROLE_USER")
-     * @Route ("/sport-64/anglet", name="structure1")
+     * @Route ("/sport-64/structure", name="structureUser")
      */
-    public function pages(): Response
+    public function pagesUsers(): Response
     {
-        return $this->render('pages/structure.html.twig', [
+        return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }

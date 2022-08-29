@@ -22,7 +22,6 @@ security:
                 path: app_logout
                 # where to redirect after logout
                 # target: app_any_route
-
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
 
@@ -36,8 +35,8 @@ security:
         - { path: ^/profile, roles: ROLE_USER }
 
     role_hierarchy:
-        ROLE_EDITOR: ROLE_USER
-        ROLE_ADMIN: ROLE_EDITOR
+        ROLE_STRUCTURE: ROLE_USER
+        ROLE_ADMIN: ROLE_STRUCTURE
 
 when@test:
     security:
