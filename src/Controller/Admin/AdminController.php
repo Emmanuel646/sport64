@@ -24,4 +24,28 @@ class AdminController extends AbstractController
             'controller_name' => 'AdminController',
         ]);
     }
+
+    #[Route('/admin/anglet-2', name: 'structureAnglet2')]
+    public function structure2(): Response
+    {
+        return $this->render('admin/structureAnglet2.html.twig', [
+            'controller_name' => 'AdminController',
+        ]);
+    }
+
+    #[Route('/admin/biarritz', name: 'structureBiarritz')]
+    public function structure3(): Response
+    {
+        return $this->render('admin/structureBiarritz.html.twig', [
+            'controller_name' => 'AdminController',
+        ]);
+    }
+
+    #[Route('/admin/st-jean', name: 'structureStJean')]
+    public function structure4(): Response
+    {
+        return $this->render('admin/structureStJean.html.twig', [
+            'controller_name' => 'AdminController',
+        ]);
+    }
 }
