@@ -3,9 +3,41 @@
 
 {% block body %}
 
-    <h2 class="homepage">Bienvenue sur votre salle de sport Saint Jean de Luz - Rue Gambetta</h2>
+    <h2 class="homepage">Bienvenue sur votre salle de sport St Jean De Luz - Rue Gambetta</h2>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="col-12 d-inline-flex mt-3 justify-content-center">
+                    <img src={{ asset('assets/images/sport1.jpg') }} width="20%" height="200px">
+                    <div class=" ms-5">
+                        <h3 class="mt-4">SPORT 64 - St Jean de Luz</h3>
+                        <p>rue Gambetta<br>
+                            64500 Saint Jean de Luz<br>
+                            <br>
+                            Tel : 05.59.12.34.56<br>
+                            mail: stjeandeluz@sport64.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 d-inline-flex m-2 justify-content-center">
+                    <form>
+                        <ul class="list-group ps-5 mt-4">
+                            {% if is_granted("ROLE_ADMIN") %}
+                                <a href="{{ path('app_option') }}" class="btn btn-success">Modifier Contrat</a>
+                            {% else %}
+                                <form>
+                                    <div class="d-inline-flex">
+                                        <button class="btn btn-success m-2" type="button" href="#">Accéder au planning salariés</button>
+                                        <button class="btn btn-success m-2" type="button" href="#">Accéder à la gestion d'abonnement</button>
+                                    </div>
 
-
-    <p>Bienvenue sur la page du site de SPORT 64 !</p>
+                                </form>
+                            {% endif %}
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

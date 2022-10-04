@@ -22,9 +22,21 @@
                     {{ form_row(registrationForm.city) }}
                 </fieldset>
 
-                {{ form_row(registrationForm.plainPassword, {
-                    label: 'Password'
-                }) }}
+                <fieldset>
+                    <legend>Gestion des options</legend>
+                    {{ form_row(registrationForm.gestsalarie) }}
+                    {{ form_row(registrationForm.gestabon) }}
+                    {{ form_row(registrationForm.gestmat) }}
+                    {{ form_row(registrationForm.geststocks) }}
+                </fieldset>
+                <br>
+                <fieldset>
+                    <Legend>Gestion du mot de passe :</Legend>
+                    {{ form_row(registrationForm.plainPassword, {
+                        label: 'Mot de passe :'
+                    }) }}
+                </fieldset>
+
                 {{ form_row(registrationForm.RGPDConsent) }}
 
                 <button type="submit" class="btn btn-primary btn-lg my-3">M'inscrire</button>

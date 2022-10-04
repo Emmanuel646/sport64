@@ -1,7 +1,8 @@
-<h1 class="headerTitle">SPORT 64 - Rester en forme toute l'année !</h1>
+<h1 class="headerTitle">SPORT 64 - Rester en forme !</h1>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">SPORT 64</a>
+    <img src="assets/images/logoS64.jpg" width="60px" height="50px" class="me-2">
+    <a class="navbar-brand" href="/">SPORT 64</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,28 +27,35 @@
             <a class="dropdown-item" href="#">Horaires</a>
             <a class="dropdown-item" href="#">Photos</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">a propos</a>
+            <a class="dropdown-item" href="#">A propos</a>
           </div>
         </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Rechercher">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+        <button class="btn btn-light my-2 my-sm-0" type="submit">Rechercher</button>
       </form>
       <div class="connect">
         <ul class="navbar-nav m-2 me-auto">
           {% if app.user %}
-            <button class="btn btn-secondary ms-2 my-sm-0" type="submit">
-              <a href="{{ path('app_logout') }}">Se déconnecter</a>
-            </button>
+            {% if is_granted("ROLE_ADMIN") %}
+              <button class="btn btn-dark m-2 my-sm-0" type="button">
+                <a class="btn btn-info" href="{{ path('app_register') }}" role="button">Création d'une <br> nouvelle franchise</a>
+              </button>
+              <button class="btn btn-dark ms-2 my-sm-0" type="button">
+                <a class="btn btn-danger" href="{{ path('app_logout') }}" role="button">Se déconnecter</a>
+              </button>
+              {% else %}
+                <button class="btn btn-dark ms-2 my-sm-0" type="button">
+                  <a class="btn btn-danger" href="{{ path('app_logout') }}" role="button">Se déconnecter</a>
+                </button>
+                {% endif %}
           {% else %}
-          <button class="btn btn-secondary m-2 my-sm-0" type="submit">
-            <a href="{{ path('app_register') }}">S'inscrire</a>
-          </button>
-          <button class="btn btn-secondary ms-2 my-sm-0" type="submit">
-            <a href="{{ path('app_login') }}">Se connecter</a>
+          <button class="btn btn-dark ms-2 my-sm-0" type="button">
+            <a class="btn btn-success" href="{{ path('app_login') }}" role="button">Se connecter</a>
           </button>
           {% endif %}
+          <img src="assets/images/logoS64.jpg" width="60px" height="50px" class="ms-3">
         </ul>
       </div>
 

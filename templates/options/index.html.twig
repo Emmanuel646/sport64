@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Option contrat{% endblock %}
+
+{% block body %}
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <a href="{{ path('home') }}" class="btn btn-outline-dark mt-3" type="button">Retourner à la page Accueil</a>
+                </div>
+                <div>
+                    <h1>Options contrat</h1>
+
+                    {{ form_start(optionForm) }}
+
+                    <fieldset>
+                        <legend>Gestion des options</legend>
+                        {{ form_row(optionForm.gestsalarie) }}
+                        {{ form_row(optionForm.gestabon) }}
+                        {{ form_row(optionForm.gestmat) }}
+                        {{ form_row(optionForm.geststocks) }}
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary btn-lg my-3">Modifier les options du contrats</button>
+                    <button type="reset" class="btn btn-primary btn-lg my-3">Annuler les modifications</button>
+                    {{ form_end(optionForm) }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

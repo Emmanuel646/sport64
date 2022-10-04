@@ -44,6 +44,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $city = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $gestsalarie = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $gestmat = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $gestabon = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $geststocks = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -170,6 +182,66 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setCity(string $city): self
     {
         $this->city = $city;
+
+        return $this;
+    }
+
+    public function isGestsalarie(): ?bool
+    {
+        return $this->gestsalarie;
+    }
+
+    public function setGestsalarie(?bool $gestsalarie): self
+    {
+        $this->gestsalarie = $gestsalarie;
+
+        return $this;
+    }
+
+    public function isGeststock(): ?bool
+    {
+        return $this->geststock;
+    }
+
+    public function setGeststock(?bool $geststock): self
+    {
+        $this->geststock = $geststock;
+
+        return $this;
+    }
+
+    public function isGestmat(): ?bool
+    {
+        return $this->gestmat;
+    }
+
+    public function setGestmat(?bool $gestmat): self
+    {
+        $this->gestmat = $gestmat;
+
+        return $this;
+    }
+
+    public function isGestabon(): ?bool
+    {
+        return $this->gestabon;
+    }
+
+    public function setGestabon(?bool $gestabon): self
+    {
+        $this->gestabon = $gestabon;
+
+        return $this;
+    }
+
+    public function isGeststocks(): ?bool
+    {
+        return $this->geststocks;
+    }
+
+    public function setGeststocks(?bool $geststocks): self
+    {
+        $this->geststocks = $geststocks;
 
         return $this;
     }

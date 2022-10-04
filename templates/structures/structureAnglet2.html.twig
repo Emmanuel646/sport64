@@ -3,9 +3,71 @@
 
 {% block body %}
 
-    <h2 class="homepage">Bienvenue sur votre salle de sport Anglet - rue Montbrun</h2>
+    <h2 class="homepage">Bienvenue sur votre salle de sport Anglet - Anglet Pignada</h2>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="col-12 d-inline-flex mt-3 justify-content-center">
+                    <img src={{ asset('assets/images/sport1.jpg') }} width="20%" height="200px">
+                    <div class=" ms-5">
+                        <h3 class="mt-4">SPORT 64 - Anglet Pignada</h3>
+                        <p>rue Montbrun<br>
+                            64600 ANGLET<br>
+                            <br>
+                            Tel : 05.59.34.12.56<br>
+                            mail: anglet2@sport64.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 d-inline-flex m-2 justify-content-center">
+                    <form>
+                        <ul class="list-group ps-5 mt-4">
+                            {% if is_granted("ROLE_FRANCHISE") %}
+                                <form>
+                                    <ul class="d-inline-flex list-group-item m-auto">
+                                        <div class="m-3">
+                                            <input type="checkbox" id="plansalarie" name="salarie">
+                                            <label for="plansalarie">Gestion des plannings salariés</label>
+                                        </div>
+                                        <div class="m-3">
+                                            <input type="checkbox" id="cardabonne" name="abonnement">
+                                            <label for="cardabonne">Gestion des abonnements</label>
+                                        </div>
+                                        <div class="m-3">
+                                            <input type="checkbox" id="buy" name="gestionstock">
+                                            <label for="buy">Gestion des stocks</label>
+                                        </div>
+                                        <div class="m-3">
+                                            <input type="checkbox" id="materiel" name="materiel">
+                                            <label for="materiel">Gestion du matériel</label>
+                                        </div>
+                                    </ul>
+                                    <div class="d-inline-flex justify-content-center mt-3">
+                                        <button class="btn btn-success me-2" width="50px" type="submit">
+                                            Valider les options
+                                        </button>
+                                        <button class="btn btn-danger" width="50px" type="submit">
+                                            Annuler
+                                        </button>
+                                    </div>
 
+                                </form>
+                            {% else %}
+                                <form>
+                                    <div class="d-inline-flex">
+                                        <button class="btn btn-success m-2" type="button" href="#">Accéder au planning salariés</button>
+                                        <button class="btn btn-success m-2" type="button" href="#">Accéder à la gestion d'abonnement</button>
+                                    </div>
 
-    <p>Bienvenue sur la page du site de SPORT 64 !</p>
+                                </form>
+                            {% endif %}
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
+
+

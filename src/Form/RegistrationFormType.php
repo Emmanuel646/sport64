@@ -56,6 +56,34 @@ class RegistrationFormType extends AbstractType
                 ],
                 'label' => 'Ville'
             ])
+            ->add('gestsalarie', CheckboxType::class, [
+                'attr' => [
+                    'class'=> 'form-check-input d-inline-block'
+                ],
+                'label' => 'Gérer les plannings salariés',
+                'required' => false
+            ])
+            ->add('gestmat', CheckboxType::class, [
+                'attr' => [
+                    'class'=> 'form-check-input d-inline-block',
+                ],
+                'label' => 'Gestion du matériel en location',
+                'required' => false
+            ])
+            ->add('gestabon', CheckboxType::class, [
+                'attr' => [
+                    'class'=> 'form-check-input d-inline-block',
+                ],
+                'label' => 'Gérer les abonnements',
+                'required' => false
+            ])
+            ->add('geststocks', CheckboxType::class, [
+                'attr' => [
+                    'class'=> 'form-check-input d-inline-block',
+                ],
+                'label' => 'Gérer les stocks',
+                'required' => false
+            ])
             ->add('RGPDConsent', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
