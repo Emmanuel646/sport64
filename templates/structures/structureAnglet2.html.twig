@@ -4,6 +4,10 @@
 {% block body %}
 
     <h2 class="homepage">Bienvenue sur votre salle de sport Anglet - Anglet Pignada</h2>
+    <div class="d-flex justify-content-center">
+        <a href="{{ path('structureAnglet') }}" class="btn btn-outline-dark" type="button">Retourner à la page structure ANGLET</a>
+    </div>
+
     <section class="container-fluid">
         <div class="row">
             <div class="col">
@@ -15,14 +19,14 @@
                             64600 ANGLET<br>
                             <br>
                             Tel : 05.59.34.12.56<br>
-                            mail: anglet2@sport64.com
+                            mail: sport64.anglet002@example.com
                         </p>
                     </div>
                 </div>
                 <div class="col-12 d-inline-flex m-2 justify-content-center">
                     <form>
                         <ul class="list-group ps-5 mt-4">
-                            {% if is_granted("ROLE_FRANCHISE") %}
+                            {% if is_granted("ROLE_ADMIN") %}
                                 <form>
                                     <ul class="d-inline-flex list-group-item m-auto">
                                         <div class="m-3">
@@ -56,7 +60,7 @@
                                 <form>
                                     <div class="d-inline-flex">
                                         <button class="btn btn-success m-2" type="button" href="#">Accéder au planning salariés</button>
-                                        <button class="btn btn-success m-2" type="button" href="#">Accéder à la gestion d'abonnement</button>
+                                        <button class="btn btn-success m-2" type="button" href="#">Accéder à la gestion des stocks</button>
                                     </div>
 
                                 </form>

@@ -12,7 +12,10 @@
         <!-- Feuilles de styles -->
         {% block stylesheets %}<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">{% endblock %}
         <!-- Fichiers JS -->
-        {% block javascripts %}<script src="{{asset('assets/js/bootstrap.bundle.min.js') }}"></script>{% endblock %}
+        {% block javascripts %}
+            <script src="{{asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+            <script src="{{ asset('assets/js/script.js') }}"></script>
+        {% endblock %}
     </head> 
     <body>
     {% block header %}
