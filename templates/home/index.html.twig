@@ -27,12 +27,10 @@
                         <h3 class="justify-content-center">BIARRITZ</h3>
                         <img src={{ asset('assets/images/sport5.jpg') }} width="100%" height="230px">
                         <div class="d-flex justify-content-center">
-                            {% if is_granted("ROLE_USER") %}
                                 <button class="btn btn-light"
                                         type="button">
                                 <a class="btn btn-outline-primary m-4" href="{{ path('structureBTZ') }}">Accéder à la franchise de Biarritz</a></button>
 
-                            {% endif %}
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6">
