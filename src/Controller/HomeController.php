@@ -51,8 +51,10 @@ class HomeController extends AbstractController
         ]);
     }
 
-
-    #[Route('/BTZ', name: 'structureBTZ')]
+    /**
+     *
+     * @Route ("/BTZ", name="structureBTZ")
+     */
     public function pagesUsersBTZ(): Response
     {
         return $this->render('structures/structureBTZ.html.twig', [
