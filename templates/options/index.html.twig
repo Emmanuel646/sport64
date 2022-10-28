@@ -21,8 +21,8 @@
                         {{ form_row(optionForm.gestmat) }}
                         {{ form_row(optionForm.geststocks) }}
                     </fieldset>
-                    <button type="submit" class="btn btn-primary btn-lg my-3">Modifier les options du contrats</button>
-                    <button type="reset" class="btn btn-primary btn-lg my-3">Annuler les modifications</button>
+                    <button type="submit" class="btn btn-primary btn-lg my-3" onclick="optionsConfirme()">Modifier les options du contrats</button>
+                    <button type="reset" class="btn btn-primary btn-lg my-3" onclick="alert('Vous avez annulé les modifications.')">Annuler les modifications</button>
                     {{ form_end(optionForm) }}
                 </div>
             </div>

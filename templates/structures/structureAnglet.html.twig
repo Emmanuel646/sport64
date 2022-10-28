@@ -1,6 +1,5 @@
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
 
     <h2 class="homepage mt-3">Salle de sport ANGLET - SPORT64</h2>
@@ -15,7 +14,7 @@
                         <h3 class="justify-content-center">001 - DE BAYONNE</h3>
                         <img src={{ asset('assets/images/sport1.jpg') }} width="100%" height="230px">
                         {% if is_granted("ROLE_ADMIN") %}
-                        <div class="d-block justify-content-center mt-3">
+                        <div class="d-block justify-content-center m-3">
                             <button class="btn btn-success me-2" width="50px" type="submit" onclick="activeConfirme()">
                                 Activer la structure
                             </button>
@@ -35,7 +34,7 @@
                             <h3 class="justify-content-center">002 - RUE MONTBRUN</h3>
                             <img src={{ asset('assets/images/sport2.jpg') }} width="100%" height="230px">
                             {% if is_granted("ROLE_ADMIN") %}
-                            <div class="d-block justify-content-center mt-3">
+                            <div class="d-inline-block justify-content-center m-3">
                                 <button class="btn btn-success me-2" width="50px" type="submit" onclick="activeConfirme()">
                                     Activer la structure
                                 </button>
