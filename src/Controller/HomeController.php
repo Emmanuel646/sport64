@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use ContainerDxxyStb\getUsersAuthenticatorService;
+use http\Client\Curl\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
@@ -91,6 +93,16 @@ class HomeController extends AbstractController
     public function pagesUsers4(): Response
     {
         return $this->render('structures/structureStjeandeluz.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    /**
+     * @Route ("/RGPD", name="mentionsLegales")
+     */
+    public function RGPD(): Response
+    {
+        return $this->render('RGPD/rgpd.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }
