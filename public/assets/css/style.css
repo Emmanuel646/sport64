@@ -2,6 +2,12 @@ body {
     font-family: Carlito sans-serif;
 }
 
+footer {
+    display: flex;
+    margin-bottom: 5px;
+    background-color: red;
+}
+
 
 .headerTitle {
     display: flex;

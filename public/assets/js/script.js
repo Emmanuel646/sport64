@@ -3,7 +3,7 @@
     var result = confirm("Voulez vous activer la structure ?");
 
     if(result)  {
-    alert("Vous venez d'activer la struture !");
+    alert("Vous venez d'activer la structure !");
 } else {
     alert("La structure n'a pas été activer.");
 }
@@ -24,7 +24,7 @@
 
     function optionsConfirme()  {
 
-        var result = confirm("Vous ètes sur le point de modifier les options de la structure.");
+        var result = confirm("Vous êtes sur le point de modifier les options de la structure.");
 
         if(result)  {
             alert("Félicitation, vous venez de modifier les options de la structure.")
