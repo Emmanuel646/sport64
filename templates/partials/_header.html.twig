@@ -40,7 +40,7 @@
           {% if app.user %}
             {% if is_granted("ROLE_ADMIN") %}
               <button class="btn btn-dark m-2 my-sm-0" type="button">
-                <a class="btn btn-info" href="{{ path('app_register') }}" role="button">Inscription d'un<br>nouvel utilisateur</a>
+                <a class="btn btn-info" href="{{ path('app_register') }}" role="button">Inscription<br>nouvel utilisateur</a>
               </button>
               <button class="btn btn-dark ms-2 my-sm-0" type="button">
                 <a class="btn btn-danger" href="{{ path('app_logout') }}" role="button" onclick="alert('Vous venez de vous déconnecter de la plateforme SPORT 64 !')">Se déconnecter</a>
