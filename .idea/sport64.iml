@@ -82,8 +82,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/sendgrid-mailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/web-profiler-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/maker-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/alrik11es/cowsayphp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/apache-pack" />
     </content>
