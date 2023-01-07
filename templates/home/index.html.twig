@@ -38,17 +38,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center">
-                    {% if app.user %}
-                        {% if is_granted("ROLE_ADMIN") %}
-                        <p>Vous êtes connecté en tant qu'Administrateur !</p>
-                            {% else %}
-                                <p>Vous êtes connecté !</p>
-                                {% endif %}
-                    {% else %}
-
-                    {% endif %}
-                </div>
             </div>
         </div>
     </section>
