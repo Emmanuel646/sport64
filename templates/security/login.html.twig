@@ -10,7 +10,6 @@
                     {% if error %}
                         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                     {% endif %}
-
                     {% if app.user %}
                         <div class="mb-3">
                             Vous êtes connecté(e) comme {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Me déconnecter</a>
@@ -21,19 +20,13 @@
                         <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
                         <label for="inputPassword">Saisisser votre Mot de Passe</label>
                         <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
                         <input type="hidden" name="_csrf_token"
-                               value="{{ csrf_token('authenticate') }}"
-                        >
-
-
+                               value="{{ csrf_token('authenticate') }}">
                         <div class="checkbox mb-3">
                             <label>
                                 <input type="checkbox" name="_remember_me"> Se souvenir de mes identifiants
                             </label>
                         </div>
-
-
                         <button class="btn btn-lg btn-primary mt-3" type="submit" onclick="alert('Vous venez de vous connecter de la plateforme SPORT 64 !')">
                             Me Connecter
                         </button>

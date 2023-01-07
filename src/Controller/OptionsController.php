@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Options;
 use App\Form\OptionFormType;
 use App\Form\RegistrationFormType;
+use App\Repository\OptionsRepository;
 use App\Security\UsersAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,7 +23,7 @@ class   OptionsController extends AbstractController
      * @Route ("/options", name="app_option")
      */
 
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, UsersAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
+    public function register(OptionsRepository $optionsRepository, Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, UsersAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
     {
         $option = new Options();
         $form = $this->createForm(OptionFormType::class, $option);
@@ -30,6 +31,8 @@ class   OptionsController extends AbstractController
 
         return $this->render('options/index.html.twig', [
             'optionForm' => $form->createView(),
+            'options' => $optionsRepository->findBy([],
+            ['gestionOrder' => 'asc'])
         ]);
     }
 }
