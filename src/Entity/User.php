@@ -39,7 +39,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $address = null;
 
     #[ORM\Column]
-    private ?float $zipcode = null;
+    private ?string $zipcode = null;
 
     #[ORM\Column(length: 255)]
     private ?string $city = null;
